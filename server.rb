@@ -2,6 +2,11 @@ require 'bundler/setup'
 require 'sinatra'
 require 'sinatra/reloader' if development?
 set :public_folder, File.dirname(__FILE__) + '/static'
+
+configure :production do
+  # set :server, :puma
+end
+
 get '/' do
   erb :index
 end
@@ -25,3 +30,4 @@ post '/upload' do
     @mes = "アップロード失敗"
   end
 end
+
