@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>ファイルアップローダーサンプル</title>
+  </head>
+  <body>
+  <form action="/upload" method="post"  enctype="multipart/form-data">
+    <p>
+      <input type="radio" name="execution" value="true" /> 実行する
+      <input type="radio" name="execution" value="false"  checked="checked" /> 実行しない
+    </p>
+      <input type="file" name="file" />
+      <button  name="submit" value="upload">送信</button>
+  </form>
+
+  </body>
+</html>
